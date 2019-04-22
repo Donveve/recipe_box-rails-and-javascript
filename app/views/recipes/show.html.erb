@@ -1,0 +1,61 @@
+<div class ='show'>
+
+<h1><%= @recipe.name %></h1>
+
+<%= link_to "Average Rating: ", recipe_ratings_path(@recipe) %><%= ratings_average(@recipe) %></br>
+
+<% if current_user %>
+  <%= rate_recipe(@recipe) %>
+<% end %>
+
+<strong>Category:</strong> <%= @recipe.category.name %><br><br>
+
+<p><%= @recipe.description %></p>
+
+<strong>Ingredients:</strong>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Quantity</th>
+  </tr>
+  <% @recipe.ingredients.each do |ingredient| %>
+    <tr>
+      <td><%= ingredient.name %></td>
+      <td>
+      <% recipe_ingredient = RecipeIngredient.where(recipe_id: @recipe.id, ingredient_id: ingredient.id) %>
+      <%= recipe_ingredient.first.quantity %>
+      </td>
+    </tr>
+  <% end %>
+</table><br>
+
+<strong>Comments:</strong>
+<%= form_for([@recipe, @comment]) do |f| %>
+  <%= f.text_area :body %>
+  <p><%= f.submit "Submit Comment", :class => 'btn-submit' %></p>
+<% end %>
+
+<div class="comments">
+  <ol>
+    <% @recipe.comments.each do |comment| %>
+      <% if comment.body %>
+        <li><%= comment.body %></li>
+      <% end %>
+    <% end %>
+  </ol>
+</div>
+
+<% if current_user && @recipe.user_id == current_user.id %>
+  <%= link_to "Edit", edit_recipe_path(@recipe) %>
+  <%= link_to "Delete", recipe_path(@recipe), method: :delete %>
+<% end %>
+<br><br>
+
+ <%= find_key_ingredients(@recipe) %>
+</div>
+
+<div class = 'img-center'>
+<center>
+<%= link_to image_tag(@recipe.image.url(:original), style:"width: 600px;"), @recipe.image.url %>
+</center>
+</div>

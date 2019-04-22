@@ -1,0 +1,326 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universal */
+html { height:100%; }
+body { position:absolute; top:0; bottom:0; right:0; left:0; }
+
+.signout{
+margin-left: 15px;
+}
+
+.show{
+  margin-top: -10px;
+}
+
+
+#welcome{
+  padding-top: 20px;
+  color:teal;
+  margin-right: 150px;
+}
+
+.container1  {margin-top: -50px;
+  color: chocolate!important;
+margin-left: 850px;
+}
+
+.input-group
+{ margin-top: 50px;
+	border: 2px solid teal;
+	overflow: auto;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  
+}
+.btn-default {
+  color: #fff;
+  background-color: teal!important;
+  text-decoration: none;
+  font-size: 1.5rem;
+  height: 40px;
+  width: 30%;
+}
+
+.container #search{
+  position:absolute;
+  top:0px;
+  left:100px;
+  right:0px;
+}
+
+
+// .text-rigth{
+//   color:chocolate;
+//   font-family: 'Tangerine', serif;
+//   margin-right: 20%;
+// }
+
+.navbar-left  {
+  font-size: 20px!important;
+  float: left !important;
+}
+
+.navbar-right  {
+  font-size: 20px!important;
+  float: right !important;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  color:chocolate;
+
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: left;
+  color: #262730;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #262730;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.7em;
+}
+
+a {
+  color: #0c0b05;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.page.current {
+  color: #ff9900;
+}
+
+a:hover {
+  color: #ff9900;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  height: 150px;
+  color: #0c0b05;
+  padding-bottom: 15%;
+}
+
+@media screen and (max-width: 1040px) {
+  .column {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center
+  }
+}
+
+#welcome{
+  padding-top: 20px;
+  color:teal;
+  margin-right: 150px;
+  font-size: 2rem;
+}
+
+
+.navbar {
+  height: 75px;
+  line-height: 75px;
+  background-color:teal;
+  font-family: 'Tangerine', serif;
+  color: #ffebcc;
+  border: none;
+  padding: 15px 70px;
+  vertical-align: middle;
+  border-bottom: 3px solid #99621E;
+}
+
+@media screen and (max-width: 1040px) {
+  .navbar {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center
+  }
+  
+  .navbar-nav > a, .navbar-brand > a {
+    font-size: 90%;
+  }
+
+  .user-info {
+    display: none;
+
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .navbar-brand > a {
+    font-size: 70%;
+  }
+
+  .navbar-left, .navbar-right {
+    display: none;
+    padding-right: 45px;
+
+  }
+}
+
+.navbar-nav > a, .navbar-brand > a {
+  color:white;
+  text-decoration: none;
+}
+
+.navbar-nav > a {
+  padding-right: 45px;
+}
+
+
+#welcome{
+  padding-top: 20px;
+  color:teal;
+  margin-right: 150px;
+  font-size: 2rem;
+
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.navbar-brand {
+  transform: translateX(-50%);
+  font-size: 25px;
+  font-family: 'Tangerine', serif;
+  left: 50%;
+  position: absolute;
+  margin-left: 0;
+}
+
+.nav.space {
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+#recipes-container {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 30px;
+  // background-color: white;
+  // opacity: 0.9;
+  color: #0c0b05;
+  min-height: 700px;
+}
+
+.img-center {
+  // display: block;
+  // margin-left: auto;
+  // margin-right: auto;
+  margin-top: -280px;
+}
+
+.imageIndex{
+  padding-top: 5%;
+  float: right;
+  width: 50%;
+  object-fit: contain;
+  margin-top: -300px;
+}
+
+.row{
+  margin-top: 20px;
+  float: left;
+}
+
+.recipe1{
+  margin-top: 20px;
+  margin-left: 55px;
+}
+
+.root-image {
+  padding-top: 1%;
+  float: left;
+  width: 60%;
+  // object-fit: contain;
+  // opacity: 0.75;
+  // margin-left: 50px;
+  height: 400px;
+  margin-top: 40px;
+
+}
+
+.right-align{
+  padding-top: 9%;
+  float: right;
+  width: 50%;
+}
+
+@media screen and (max-width: 920px) {
+  .root-image {
+    width: 100%;
+    object-fit: contain;
+    opacity: 0.75;
+  }
+  
+  .right-align{
+    width: 100%;
+  }
+}
+
+.signup {
+  width: 100%;
+  margin-left: 35%;
+}
+
+.centered > a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-default {
+  color: #fff;
+  background-color: #ff9900;
+  text-decoration: none;
+  font-size: 1.5rem;
+  height: 40px;
+  width: 30%;
+  margin-top: 30px;
+}
+
+.btn-submit, .next-recipe {
+  color: #0c0b05;
+  background-color: #ff9900;
+  font-size: 1.5rem;
+  height: 25px;
+  width: 180px;
+}

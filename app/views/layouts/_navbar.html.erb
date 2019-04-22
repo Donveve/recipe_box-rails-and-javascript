@@ -1,0 +1,33 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+<div class="nav navbar-nav navbar-left">
+  <%= link_to "Quick Categories", categories_path %>
+   </div>
+
+   <div class="navbar-brand">
+      <%= link_to "Home", root_path %>
+    </div>
+
+<div class="nav navbar-nav navbar-right">
+      <% if current_user %>
+        <span class="user-info"> 
+          Hi! <%= current_user.email %>
+
+          <div class="nav navbar-nav navbar-left">
+           <%= link_to "Recipes", recipes_path %>
+           </div>
+
+        </span>
+
+        <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete,  class: "signout" %>
+      <% else %>
+        <%= link_to "Sign In", new_user_session_path %>
+        <%= link_to "Sign Up", new_user_registration_path %>
+      <% end %>
+    </div>
+
+ 
+
+  </div>
+</nav>
